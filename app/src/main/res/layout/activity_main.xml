@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sejam Bem Vindos!"
+        android:gravity="center"
+        android:textSize="@dimen/titulos"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-mail:"
+        android:textSize="@dimen/subtitulo"
+        android:gravity="center"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Preencha seu nome de usuario aqui"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress"
+        android:minHeight="@dimen/subtitulo"
+        android:id="@+id/txtEmail"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Senha:"
+        android:textSize="@dimen/subtitulo"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Digite sua senha aqui"
+        android:autofillHints="password"
+        android:inputType="textPassword"
+        android:minHeight="@dimen/subtitulo"
+        android:id="@+id/txtSenha"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10sp"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login"
+        android:textSize="@dimen/subtitulo"
+        android:id="@+id/btnLogin"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Esqueceu a senha? Clique aqui"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        />
+
+</LinearLayout>
