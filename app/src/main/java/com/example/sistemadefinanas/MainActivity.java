@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Usuario carregarUsuario(){
         Usuario usuario = new Usuario();
-        usuario.setEmail("brendonwallace2001@gmail.com");
-        usuario.setNome("Brendon Wallace");
-        usuario.setSenha("12346");
+        usuario.setEmail("testedelogin@gmail.com");
+        usuario.setNome("Teste");
+        usuario.setSenha("123456");
         return usuario;
     }
 
@@ -62,25 +62,26 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
     }
 
-    private boolean verificarLogin(String nome, String senha){
+    private String verificarLogin(String email, String senha){
         Usuario usuario = carregarUsuario();
-        String nomeLogin = usuario.getNome();
+        String emailLogin = usuario.getEmail();
         String senhaLogin = usuario.getSenha();
-        return Objects.equals(nome, nomeLogin) && Objects.equals(senha, senhaLogin);
+        if(Objects.equals(email, emailLogin) && Objects.equals(senha, senhaLogin))
+            return usuario.getNome();
+        return null;
     }
 
     private void criarEventoBotaoLogin(){
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nome = txtEmail.getText().toString();
+                String email = txtEmail.getText().toString();
                 String senha = txtSenha.getText().toString();
 
-                boolean okay = verificarLogin(nome, senha);
+                String okay = verificarLogin(email, senha);
 
                 Intent intent = new Intent(MainActivity.this, TelaPrincipal.class);
-                if (okay)
-                    intent.putExtra("nome", nome);
+                intent.putExtra("nome", okay);
 
                 startActivity(intent);
             }
