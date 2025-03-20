@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,12 +20,9 @@ import repository.implementacao.UsuarioRepository;
 import repository.interfaces.IUsuarioRepository;
 
 public class MainActivity extends AppCompatActivity {
-
-
     private EditText txtEmail;
     private EditText txtSenha;
     private Button btnLogin;
-
 
 
     @Override
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         salvarUsuario(carregarUsuario());
     }
 
-    private Usuario carregarUsuario(){
+    private Usuario carregarUsuario() {
         Usuario usuario = new Usuario();
         usuario.setEmail("testedelogin@gmail.com");
         usuario.setNome("Teste");
@@ -51,42 +49,41 @@ public class MainActivity extends AppCompatActivity {
         return usuario;
     }
 
-    private void salvarUsuario(Usuario usuario){
+    private void salvarUsuario(Usuario usuario) {
         IUsuarioRepository repository = new UsuarioRepository(MainActivity.this);
         repository.salvar(usuario);
     }
 
-    private void vincularComponentes(){
+    private void vincularComponentes() {
         txtEmail = findViewById(R.id.txtEmail);
         txtSenha = findViewById(R.id.txtSenha);
         btnLogin = findViewById(R.id.btnLogin);
     }
 
-    private String verificarLogin(String email, String senha){
-        Usuario usuario = carregarUsuario();
+    private boolean verificarLogin(String email, String senha, Usuario usuario) {
         String emailLogin = usuario.getEmail();
         String senhaLogin = usuario.getSenha();
-        if(Objects.equals(email, emailLogin) && Objects.equals(senha, senhaLogin))
-            return usuario.getNome();
-        return null;
+        return Objects.equals(email, emailLogin) && Objects.equals(senha, senhaLogin);
     }
 
-    private void criarEventoBotaoLogin(){
+    private void criarEventoBotaoLogin() {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Usuario usuario = carregarUsuario();
+
                 String email = txtEmail.getText().toString();
                 String senha = txtSenha.getText().toString();
 
-                String okay = verificarLogin(email, senha);
 
                 Intent intent = new Intent(MainActivity.this, TelaPrincipal.class);
-                intent.putExtra("nome", okay);
+                if (verificarLogin(email, senha, usuario)) {
+                    intent.putExtra("nome", usuario.getNome());
+                    startActivity(intent);
+                } else
+                    Toast.makeText(MainActivity.this, "Cadastro não encontrado! Tente novamente", Toast.LENGTH_SHORT).show();
 
-                startActivity(intent);
             }
         });
     }
-
-
 }

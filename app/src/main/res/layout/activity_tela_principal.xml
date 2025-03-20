@@ -7,16 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".TelaPrincipal"
-    android:gravity="center">
+    >
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/lblNome"
+        android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:text="Teste"
-        android:textSize="@dimen/subtitulo"
-        android:gravity="center"
-        android:id="@+id/lblNome"
-        />
+        android:textSize="@dimen/subtitulo" />
 
 
 </LinearLayout>

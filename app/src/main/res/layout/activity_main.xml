@@ -9,6 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     tools:ignore="HardcodedText"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
     <TextView
@@ -66,6 +67,7 @@
         android:inputType="textPassword"
         android:minHeight="@dimen/subtitulo"
         android:id="@+id/txtSenha"
+
         />
     <View
         android:layout_width="match_parent"
