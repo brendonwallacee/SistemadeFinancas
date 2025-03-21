@@ -1,6 +1,7 @@
 package com.example.sistemadefinanas;
 
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class TelaPrincipal extends AppCompatActivity {
     private TextView lblNome;
+    private ListView listBoletos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
