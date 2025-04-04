@@ -1,4 +1,4 @@
-package com.example.sistemadefinanas;
+package com.example.sistemadefinancas;
 
 import android.os.Bundle;
 import android.widget.ListView;

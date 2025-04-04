@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.sistemadefinanas"
+    namespace = "com.example.sistemadefinancas"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.sistemadefinanas"
+        applicationId = "com.example.sistemadefinancas"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -33,6 +33,8 @@ android {
 
 dependencies {
 
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
