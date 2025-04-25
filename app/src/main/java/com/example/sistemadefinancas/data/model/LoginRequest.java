@@ -1,8 +1,8 @@
-package com.example.sistemadefinancas.domains.login;
+package com.example.sistemadefinancas.data.model;
 
 public class LoginRequest {
-    private final String login;
-    private final String senha;
+    private String login;
+    private String senha;
 
     public LoginRequest(String login, String senha) {
         this.login = login;
@@ -16,4 +16,13 @@ public class LoginRequest {
     public String getSenha() {
         return senha;
     }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
 }
