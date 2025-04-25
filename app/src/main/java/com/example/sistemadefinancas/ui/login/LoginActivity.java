@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         trazerEntradasDaTela();
         viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
@@ -45,8 +45,6 @@ public class LoginActivity extends AppCompatActivity {
     private void login() {
         String login = etLogin.getText().toString();
         String senha = etSenha.getText().toString();
-        System.out.printf(login);
-        System.out.printf(senha);
         viewModel.login(login, senha);
 
         viewModel.getLoginResult().observe(this, result -> {
@@ -57,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                 // INCLUIR SHARED PREFERENCES E REDIRECIONAR ASSIM QUE DER
             } else if ((result.status == Resource.Status.ERROR)) {
                 Toast.makeText(this, result.message, Toast.LENGTH_SHORT).show();
-                System.out.println(result.message);
             }
         });
     }
