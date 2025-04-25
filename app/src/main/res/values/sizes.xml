@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="titulos">36sp</dimen>
-    <dimen name="subtitulo">22sp</dimen>
+    <dimen name="titulos">48sp</dimen>
+    <dimen name="subtitulo">24sp</dimen>
 </resources>

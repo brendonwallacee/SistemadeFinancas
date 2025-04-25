@@ -1,5 +1,6 @@
 package com.example.sistemadefinancas.ui.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.sistemadefinancas.R;
 import com.example.sistemadefinancas.data.model.LoginResponse;
+import com.example.sistemadefinancas.ui.home.HomeActivity;
 import com.example.sistemadefinancas.utils.Resource;
 
 
@@ -52,7 +54,12 @@ public class LoginActivity extends AppCompatActivity {
                 LoginResponse response = result.data;
                 Toast.makeText(this, "Token: " + response.getToken(), Toast.LENGTH_SHORT).show();
 
-                // INCLUIR SHARED PREFERENCES E REDIRECIONAR ASSIM QUE DER
+
+                // INCLUIR SHARED PREFERENCES
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+
+
             } else if ((result.status == Resource.Status.ERROR)) {
                 Toast.makeText(this, result.message, Toast.LENGTH_SHORT).show();
             }
