@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.sistemadefinancas.data.model.LoginResponse;
+import com.example.sistemadefinancas.data.model.login.LoginResponse;
 import com.example.sistemadefinancas.data.repository.AuthRepository;
 import com.example.sistemadefinancas.utils.Resource;
 
@@ -16,7 +16,7 @@ public class LoginViewModel extends ViewModel {
         return loginResult;
     }
 
-    public void login(String email, String password) {
-        repository.login(email, password, loginResult);
+    public void login(String login, String password) {
+        repository.login(login, password, loginResult);
     }
 }

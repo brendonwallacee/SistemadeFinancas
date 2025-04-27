@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.recovery.envio_email.EnvioEmailActivity">
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Recuperação de Senha"
+        android:textSize="@dimen/titulos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="325dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="128dp"
+        android:gravity="center"
+        android:text="Confirme seu email, estaremos enviando um token para o mesmo."
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcome"
+        tools:layout_editor_absoluteX="43dp" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center|start"
+        android:text="Email:"
+        android:textColor="@color/letra_azul"
+        android:textSize="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/vermelho"
+        android:text="Enviar Token"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="password"
+        android:background="@drawable/edittext_cinza"
+        android:gravity="center"
+        android:hint="Digite seu email aqui"
+        android:inputType="textPassword"
+        android:minHeight="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.recovery.mudar_senha.MudarSenhaActivity">
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Altere sua senha"
+        android:textSize="@dimen/titulos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNovaSenha"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="username"
+        android:background="@drawable/edittext_cinza"
+        android:gravity="center"
+        android:hint="Token enviado no email"
+        android:inputType="textPersonName"
+        android:minHeight="@dimen/subtitulo"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNovaSenha" />
+
+    <EditText
+        android:id="@+id/edtToken"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="username"
+        android:background="@drawable/edittext_cinza"
+        android:gravity="center"
+        android:hint="Token enviado no email"
+        android:inputType="textPersonName"
+        android:minHeight="@dimen/subtitulo"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtToken" />
+
+    <TextView
+        android:id="@+id/txtNovaSenha"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:gravity="center|start"
+        android:text="Nova Senha:"
+        android:textColor="@color/letra_azul"
+        android:textSize="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="410dp" />
+
+    <TextView
+        android:id="@+id/txtToken"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="220dp"
+        android:gravity="center|start"
+        android:text="Token:"
+        android:textColor="@color/letra_azul"
+        android:textSize="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+
+    <Button
+        android:id="@+id/btnMudarSenha"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/vermelho"
+        android:text="@string/alterar"
+        android:textColor="@color/white"
+        android:textSize="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtNovaSenha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

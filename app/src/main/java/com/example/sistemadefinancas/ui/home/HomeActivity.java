@@ -1,4 +1,4 @@
-package com.example.sistemadefinancas;
+package com.example.sistemadefinancas.ui.home;
 
 import android.os.Bundle;
 import android.widget.ListView;
@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.sistemadefinancas.R;
 
 public class HomeActivity extends AppCompatActivity {
     private TextView lblNome;
@@ -29,16 +31,17 @@ public class HomeActivity extends AppCompatActivity {
         mostrarNomeUsuario();
 
     }
-    private void vincularComponentes(){
+
+    private void vincularComponentes() {
         lblNome = findViewById(R.id.lblNome);
     }
 
-    private void mostrarNomeUsuario(){
+    private void mostrarNomeUsuario() {
         String nome = getIntent().getStringExtra("nome");
 
-        if (nome != null){
-            lblNome.setText("Olá, "+ nome);
-        }else lblNome.setText("usuário não encontrado");
+        if (nome != null) {
+            lblNome.setText("Olá, " + nome);
+        }
     }
 
 
