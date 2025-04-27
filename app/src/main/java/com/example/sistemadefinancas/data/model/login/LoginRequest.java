@@ -1,4 +1,4 @@
-package com.example.sistemadefinancas.data.model;
+package com.example.sistemadefinancas.data.model.login;
 
 public class LoginRequest {
     private String login;
@@ -13,6 +13,10 @@ public class LoginRequest {
         return login;
     }
 
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     public String getSenha() {
         return senha;
     }
@@ -20,9 +24,4 @@ public class LoginRequest {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
 }

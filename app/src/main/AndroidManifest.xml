@@ -18,6 +18,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.recovery.mudar_senha.MudarSenhaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.recovery.envio_email.EnvioEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.cadastro.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.HomeActivity"
             android:exported="false" />
         <activity

@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".ui.login.LoginActivity"
-    tools:ignore="HardcodedText"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="144dp">
+    android:layout_height="match_parent"
+    tools:context=".ui.cadastro.RegisterActivity">
 
     <TextView
-        android:id="@+id/txtWelcome"
+        android:id="@+id/txtHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Sejam Bem Vindos!"
+        android:text="Cadastre-se aqui"
         android:textSize="@dimen/titulos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtUsuario"
+    <EditText
+        android:id="@+id/edtSenha"
         android:layout_width="299dp"
         android:layout_height="39dp"
-        android:layout_marginTop="160dp"
-        android:gravity="center|start"
-        android:text="Usuário:"
-        android:textColor="@color/letra_azul"
-        android:textSize="@dimen/subtitulo"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="password"
+        android:background="@drawable/edittext_cinza"
+        android:gravity="center"
+        android:hint="Digite sua senha aqui"
+        android:inputType="textPassword"
+        android:minHeight="@dimen/subtitulo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+        app:layout_constraintTop_toBottomOf="@id/txtSenha" />
 
     <EditText
-        android:id="@+id/edLogin"
+        android:id="@+id/edtLogin"
         android:layout_width="299dp"
         android:layout_height="39dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:autofillHints="username"
         android:background="@drawable/edittext_cinza"
@@ -56,77 +56,75 @@
         app:layout_constraintTop_toBottomOf="@id/txtUsuario" />
 
     <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="164dp"
+        android:gravity="center|start"
+        android:text="Email:"
+        android:textColor="@color/letra_azul"
+        android:textSize="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHeader" />
+
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center|start"
+        android:text="Usuário:"
+        android:textColor="@color/letra_azul"
+        android:textSize="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/vermelho"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        android:textSize="@dimen/subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSenha" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="username"
+        android:background="@drawable/edittext_cinza"
+        android:gravity="center"
+        android:hint="Preencha seu email aqui"
+        android:inputType="textPersonName"
+        android:minHeight="@dimen/subtitulo"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+    <TextView
         android:id="@+id/txtSenha"
         android:layout_width="299dp"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:gravity="center|start"
         android:text="Senha:"
         android:textColor="@color/letra_azul"
         android:textSize="@dimen/subtitulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edLogin" />
-
-    <EditText
-        android:id="@+id/etSenha"
-        android:layout_width="299dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints="password"
-        android:background="@drawable/edittext_cinza"
-        android:gravity="center"
-        android:hint="Digite sua senha aqui"
-        android:inputType="textPassword"
-        android:minHeight="@dimen/subtitulo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSenha" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/vermelho"
-        android:text="Login"
-        android:textColor="@color/white"
-        android:textSize="@dimen/subtitulo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etSenha" />
-
-    <TextView
-        android:id="@+id/txtForgotPassword"
-        android:layout_width="299dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="76dp"
-        android:background="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center"
-        android:text="Esqueceu a senha? Clique aqui"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
-
-    <Button
-        android:id="@+id/btnTelaCadastro"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="72dp"
-        android:backgroundTint="@color/letra_azul"
-        android:text="Cadastre-se"
-        android:textColor="@color/white"
-        android:textSize="@dimen/subtitulo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etSenha" />
+        app:layout_constraintTop_toBottomOf="@id/edtLogin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

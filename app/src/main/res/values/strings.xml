@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Sistema de Finanças</string>
     <string name="save">Salvar</string>
+    <string name="alterar">Alterar</string>
 </resources>

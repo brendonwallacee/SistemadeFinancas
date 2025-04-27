@@ -31,16 +31,17 @@ public class HomeActivity extends AppCompatActivity {
         mostrarNomeUsuario();
 
     }
-    private void vincularComponentes(){
+
+    private void vincularComponentes() {
         lblNome = findViewById(R.id.lblNome);
     }
 
-    private void mostrarNomeUsuario(){
+    private void mostrarNomeUsuario() {
         String nome = getIntent().getStringExtra("nome");
 
-        if (nome != null){
-            lblNome.setText("Olá, "+ nome);
-        }else lblNome.setText("usuário não encontrado");
+        if (nome != null) {
+            lblNome.setText("Olá, " + nome);
+        }
     }
 
 
